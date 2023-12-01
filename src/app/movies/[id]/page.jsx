@@ -17,7 +17,7 @@ const MovieDetail = async({params}) => {
             <p className='text-[.5rem] border-2 px-2 rounded-[10px] mr-1'>{movieDetails.original_language}</p>
             <div> <p>
               {movieDetails.genres.map(genre=>{
-                return <span className='border-2 rounded-[12px] text-[.6rem] px-2 py-1 mr-2'>{genre.name}</span>
+                return <span key={genre} className='border-2 rounded-[12px] text-[.6rem] px-2 py-1 mr-2'>{genre.name}</span>
               })
 
               }
@@ -35,7 +35,7 @@ const MovieDetail = async({params}) => {
           <div className='flex flex-wrap gap-8 justify-center'>
              {similarMovies.map(movie=>{
               return(
-                <div >
+                <div key={movie.id}>
                  <Image alt="Loading..." className='rounded-[10px]' src={IMAGE_BASE_URL+movie.poster_path}/>
                  <div> 
                   <h1 className='max-h-[35px]  sm:max-h-[45px]  text-center text-[.7rem] sm:text-[1rem] overflow-hidden text-white'>{movie.title}</h1>
