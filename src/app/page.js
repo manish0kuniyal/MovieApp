@@ -7,9 +7,9 @@ const HomePage =async() => {
   const movies=await getTrendingMovies()
 
   return (
-    <div > 
-     <h2>Top Trending Movies</h2>
-     <div className='flex flex-wrap gap-x-8 gap-y-8  items-center justify-center'>
+    <div className='bg-black'> 
+     <h2 className='text-white mx-3 text-[1.5rem] py-4 font-mono'>Top Trending Movies</h2>
+     <div className='flex flex-wrap gap-4 gap-y-5 items-center justify-center '>
       {movies.map(movie=>{
         return <Card movie={movie}></Card>
       })

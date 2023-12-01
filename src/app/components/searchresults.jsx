@@ -32,11 +32,11 @@ import Card from './card'
     return (
     <div>
         
-        <div className='flex flex-wrap justify-center'>
-            <h1>Top Search for &quot;{searchText}&quot;</h1>
-            <div>
-                <select onChange={(event)=>filterMovies(event.target.value)}>
-                    <option >Sort By</option>
+        <div className='flex flex-wrap justify-evenly items-center py-5 bg-black '>
+            <h1 className=' text-white text-[1.5rem] font-mono text-center'>Top Search for &quot;{searchText}&quot;</h1>
+            <div >
+                <select className=' bg-transparent text-white text-[1rem] border-2 px-3 rounded-[10px] py-[2px] my-2' onChange={(event)=>filterMovies(event.target.value)}>
+                    <option  className='bg-transparent'>Sort By</option>
                     <option value="release_date">release year</option>
                     <option value="popularity">popularity</option>
                     <option value="vote_average">rating</option>
@@ -44,7 +44,7 @@ import Card from './card'
             </div>
         </div>
 
-        <div className='flex flex-wrap gap-3'>
+        <div className='pt-8 bg-black flex flex-wrap gap-3 justify-center  '>
             {filteredMovies.map((movie)=>{
                 return <Card key={movie.id} movie={movie}></Card>
             })}

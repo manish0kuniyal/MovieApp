@@ -18,9 +18,9 @@ function Header() {
     <div>
       <nav className=" bg-black text-white ">
         <div className="flex  mx-[5%] sm:mx-[10%]  justify-between  items-center p-3">
-         <Link href='/'>MovieApp</Link> 
-          <form className=" flex ml-[20%]" onSubmit={event=>handleSubmit(event)}>
-            <input onChange={event=>setSearchInp(event.target.value)} placeholder="moviename..." className="text-xs text-black w-[60%] sm:w-[70%] px-2 py-1 rounded-[10px] " />
+         <Link href='/' className="text-[1rem] sm:text-[2rem] font-mono">nexmovies</Link> 
+          <form className=" flex ml-[20%] " onSubmit={event=>handleSubmit(event)}>
+            <input onChange={event=>setSearchInp(event.target.value)} placeholder="moviename..." className="text-[.5rem] sm:text-[1rem] text-black w-[60%] sm:w-[70%] px-2 py-1 rounded-[10px] " />
             <button className="text-xs ml-2 border-2  px-3 rounded-[10px]">find</button>
           </form>
         </div>
