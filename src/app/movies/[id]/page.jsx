@@ -9,7 +9,7 @@ const MovieDetail = async({params}) => {
   return (
     <div>
         <div className=' flex  flex-wrap  justify-evenly bg-black text-white px-2 py-[2%] '>
-            <Image alt="Loading..." className='  w-[auto] rounded-[5%]' src={IMAGE_BASE_URL+movieDetails.backdrop_path}/>
+            <Image width={220} height={330} alt="Loading..." className='  w-[auto] rounded-[5%]' src={IMAGE_BASE_URL+movieDetails.backdrop_path}/>
             <div className='   h-[auto] ml-3 text-sm'>
             <h3 className='mt-4 font-bold text-[1rem]'>{movieDetails.title}</h3> 
             <p className='font-bold text-[.7rem] mt-2'>{movieDetails.release_date}</p>
@@ -36,7 +36,7 @@ const MovieDetail = async({params}) => {
              {similarMovies.map(movie=>{
               return(
                 <div key={movie.id}>
-                 <Image alt="Loading..." className='rounded-[10px]' src={IMAGE_BASE_URL+movie.poster_path}/>
+                 <Image width={220} height={330} alt="Loading..." className='rounded-[10px]' src={IMAGE_BASE_URL+movie.poster_path}/>
                  <div> 
                   <h1 className='max-h-[35px]  sm:max-h-[45px]  text-center text-[.7rem] sm:text-[1rem] overflow-hidden text-white'>{movie.title}</h1>
                  </div>
